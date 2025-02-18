@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+py2neo
+networkx
+scikit-learn
+joblib
+pandas
+numpy
