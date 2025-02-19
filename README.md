@@ -77,6 +77,38 @@ movie-recommender-neo4j-mlops/
    uvicorn src.api:app --reload
    ```
 
+## 🌐 Testando a API (Deploy no Railway)
+A API está disponível publicamente no Railway:
+
+🔗 **Acesse a API:** [https://movie-recommender-neo4j-mlops-production.up.railway.app/](https://movie-recommender-neo4j-mlops-production.up.railway.app/)
+
+### 🔹 Teste a API no navegador:
+Para verificar se a API está rodando:
+```
+https://movie-recommender-neo4j-mlops-production.up.railway.app/
+```
+Você verá a resposta:
+```json
+{"message": "API de recomendação de filmes está ativa!"}
+```
+
+### 🔹 Testar uma recomendação de filme:
+```
+https://movie-recommender-neo4j-mlops-production.up.railway.app/recommend/10/5
+```
+Ou no terminal:
+```bash
+curl https://movie-recommender-neo4j-mlops-production.up.railway.app/recommend/10/5
+```
+Se estiver funcionando, verá uma resposta como esta:
+```json
+{
+    "user_id": 10,
+    "movie_id": 5,
+    "predicted_rating": 3.77
+}
+```
+
 ## 📊 Fluxo do Sistema
 
 1. **Coleta de Dados** → Importação de datasets de filmes e usuários.
